@@ -8,6 +8,11 @@
     </head>
     <body>
         <header class="page-header">
+            <div>
+                <a href="{% url 'post_new' %}" class="top-menu">
+                    {% include './icons/file-earmark-plus.svg' %}
+                </a>
+            </div>
             <h1><a href="/">Django Girls Blog</a></h1>
         </header>
         <main class="container">
