@@ -48,6 +48,15 @@ h4 {
     margin-right: 20px;
 }
 
+.article-menu,
+.article-menu-menu:hover,
+.article-menu-menu:visited {
+    color: #570808;
+    float: right;
+    font-size: 20pt;
+    margin-right: 30px;
+}
+
 .post {
     margin-bottom: 70px;
     /*margin-left: 20px;*/

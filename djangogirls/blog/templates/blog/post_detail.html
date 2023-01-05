@@ -7,6 +7,9 @@
                 {{ post.published_date }}
             </time>
         {% endif %}
+        <a href="{% url 'post_edit' pk=post.pk %}" class="article-menu">
+            {% include './icons/pencil-fill.svg' %}
+        </a>
         <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
     </article>
