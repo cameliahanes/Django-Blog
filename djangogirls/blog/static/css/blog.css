@@ -1,8 +1,8 @@
 .page-header {
     background-color: #570808;
     margin-top: 0;
-    margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
+    margin-bottom: 60px;
+    padding: 30px 30px 70px 40px;
 }
 
 .page-header h1,
@@ -43,9 +43,28 @@ h4 {
     margin-right: 20px;
 }
 
+.top-menu-draft,
+.top-menu-draft:hover,
+.top-menu-draft:visited
+{
+    color: #FFFFFF;
+    float: right;
+    font-size: 26pt;
+    margin-right: 30px;
+}
+
 .article-menu,
 .article-menu-menu:hover,
 .article-menu-menu:visited {
+    color: #570808;
+    float: right;
+    font-size: 20pt;
+    margin-right: 30px;
+}
+
+.article-menu-remove,
+.article-menu-remove-menu:hover,
+.article-menu-remove-menu:visited {
     color: #570808;
     float: right;
     font-size: 20pt;
