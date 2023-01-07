@@ -71,6 +71,17 @@ h4 {
     margin-right: 30px;
 }
 
+.article-menu-publish,
+.article-menu-publish-menu:hover,
+.article-menu-publish-menu:visited
+{
+    color: #570808;
+    float: right;
+    font-size: 15pt;
+    margin-right: 30px;
+    margin-top: 7pt;
+}
+
 .post {
     margin-bottom: 70px;
     /*margin-left: 20px;*/
