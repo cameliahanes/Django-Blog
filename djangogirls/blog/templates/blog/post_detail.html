@@ -8,9 +8,9 @@
             </time>
         {% endif %}
         {% if not post.published_date %}
-           <a href="{% url 'post_publish' pk=post.pk %}" class="article-menu-publish">
-               {% include './icons/arrow-publish.svg' %}
-           </a>
+            <a href="{% url 'post_publish' pk=post.pk %}" class="article-menu-publish">
+                {% include './icons/arrow-publish.svg' %}
+            </a>
         {% endif %}
         <a href="{% url 'post_edit' pk=post.pk %}" class="article-menu">
             {% include './icons/pencil-fill.svg' %}
@@ -20,5 +20,16 @@
         </a>
         <h2>{{ post.title }}</h2>
         <p>{{ post.text|linebreaksbr }}</p>
+        {# Support for comments.#}
     </article>
+
+    <div data-gb-custom-block data-tag="for"></div>
+    <div class="comment">
+        <div class="date">{{ comment.created_date }}</div>
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment.text|linebreaks }}</p>
+    </div>
+    <div data-gb-custom-block data-tag="empty">
+        <p>No comments here yet :(</p>
+    </div>
 {% endblock %}
