@@ -61,3 +61,8 @@ def post_publish(request, pk):
     post.published_date = timezone.now()
     post.publish()
     return redirect('post_list')
+
+
+def post_comments(request, pk):
+    # TODO: add rendering of comments.
+    return redirect('post_list')

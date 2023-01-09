@@ -9,7 +9,7 @@
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>
 {#            <a href="<div data-gb-custom-block data-tag=" url" data-0='post_detail'></div>Comments:#}
-{#            {{ post.comments.count }}</a>#}
+            <h4><a href="{% url 'post_comments' pk=post.pk %}">Comments: {{ post.comments.count }}</a></h4>
         </article>
     {% endfor %}
 {% endblock %}
