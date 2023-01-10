@@ -22,14 +22,18 @@
         <p>{{ post.text|linebreaksbr }}</p>
         {# Support for comments.#}
     </article>
-
-    <div data-gb-custom-block data-tag="for"></div>
-    <div class="comment">
-        <div class="date">{{ comment.created_date }}</div>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.text|linebreaks }}</p>
-    </div>
-    <div data-gb-custom-block data-tag="empty">
-        <p>No comments here yet :(</p>
-    </div>
+    {% if not post.comments.all %}
+        {{ "No comments here yet." }}
+    {% else %}
+        <h3>{{ "Comments" }}</h3>
+    {% endif %}
+    {% for comment in post.comments.all %}
+        {{ comment.content }}
+        <p>
+            On {{ comment.created_date }}&nbsp;
+            <b>{{ comment.author }}</b> wrote:
+        </p>
+        <p>{{ comment.text }}</p>
+        <hr>
+    {% endfor %}
 {% endblock %}
