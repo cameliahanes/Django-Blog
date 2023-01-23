@@ -9,7 +9,6 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    # Add pk.
 
     def publish(self):
         self.published_date = timezone.now()
@@ -25,6 +24,9 @@ class Comment(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     approved_comment = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_date']
 
     def approve(self):
         self.approved_comment = True

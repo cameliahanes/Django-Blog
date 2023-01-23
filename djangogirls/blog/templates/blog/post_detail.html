@@ -27,6 +27,22 @@
     {% else %}
         <h3>{{ "Comments" }}</h3>
     {% endif %}
+    {# Here add option inline with the others to add a comment. #}
+    {#  Form to add a comment.  #}
+    <div class="card-body">
+        {% if new_comment %}
+            <div class="alert alert-success" role="alert">
+            Your comment is awaiting moderation
+            </div>
+        {% else %}
+            <h5>Leave a comment</h5>
+            <form method="post" style="margin-top: 1.3em;">
+              {{ comment_form.as_p }}
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+            </form>
+        {% endif %}
+    </div>
     {% for comment in post.comments.all %}
         {{ comment.content }}
         <p>
