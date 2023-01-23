@@ -65,4 +65,4 @@ def post_publish(request, pk):
 
 def post_comments(request, pk):
     # TODO: add rendering of comments.
-    return redirect('post_list')
+    return redirect('post_detail', pk=pk)
